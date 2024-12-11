@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0d0d0d">
+    <meta name="msapplication-TileColor" content="#0d0d0d">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <title>Gaming Platform - Главная</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dark">
+    <header>
+        <div class="container">
+            <h1>Gaming Platform</h1>
+            <div id="navbar-placeholder"></div>
+        </div>
+    </header>
+    <main class="container">
+        <section class="hero">
+            <h2>Добро пожаловать!</h2>
+            <p>Мы помогаем игрокам находить тиммейтов по всему миру.</p>
+            <a href="register.html" class="cta-button">Присоединиться сейчас</a>
+        </section>
+        <section class="features">
+            <h3>Особенности</h3>
+            <div class="feature-item">
+                <i class="fas fa-users fa-3x"></i>
+                <h4>Сообщество</h4>
+                <p>Присоединяйтесь к сообществу игроков.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-gamepad fa-3x"></i>
+                <h4>Игры</h4>
+                <p>Играйте в лучшие игры вместе с нами.</p>
+            </div>
+        
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Gaming Platform. Все права защищены.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+                document.dispatchEvent(new Event('DOMContentLoaded'));
+            });
+    </script>
+</body>
+</html>

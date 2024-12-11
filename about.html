@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0d0d0d">
+    <meta name="msapplication-TileColor" content="#0d0d0d">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <title>Gaming Platform - О нас</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark">
+    <header>
+        <div class="container">
+            <h1>О нас</h1>
+            <div id="navbar-placeholder"></div>
+        </div>
+    </header>
+    <main class="container">
+        <section class="hero">
+            <h2>Кто мы?</h2>
+            <p>Мы - команда геймеров, стремящаяся объединить игроков по всему миру.</p>
+        </section>
+        <section class="features">
+            <h3>Наша миссия</h3>
+            <p>Создание безопасного и увлекательного пространства для игроков.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Gaming Platform. Все права защищены.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+                document.dispatchEvent(new Event('DOMContentLoaded'));
+            });
+    </script>
+</body>
+</html>
